@@ -1,0 +1,21 @@
+[build]
+  publish = "."
+  command = ""
+
+# The whole site is a few small files, so nothing gets cached hard.
+# Long caching here caused browsers to keep running an old copy of the
+# site for days after a redeploy - not worth the handful of KB it saves.
+# Netlify still sends ETags, so unchanged files come back as 304s.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Section URLs (/rules, /friends, /leaderboard/friends ...) are handled by the
+# page itself. This sends any path that is not a real file to index.html so a
+# refresh or a shared link still lands on the right section. Real files
+# (css/, js/, data/) are served as normal because this rule is not forced.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
