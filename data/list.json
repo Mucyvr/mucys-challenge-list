@@ -1,0 +1,21 @@
+{
+ "publishedAt": 0,
+ "_readme": "This is the PUBLISHED list - the one every visitor sees. Do not edit it by hand. Make your changes on the site, then Admin -> Publish -> Download data/list.json and drop the downloaded file in here, replacing this one. Redeploy and everyone sees the new list.",
+ "config": {
+  "title": "Mucy's Challenge List",
+  "ver": "v1.0",
+  "blurb": "The challenge list run by Mucy. Beat a challenge, send the clip in the Discord, get on the leaderboard.",
+  "discord": "",
+  "studio": "https://mucys-studio.com",
+  "legacyAfter": 150,
+  "pin": "",
+  "supaUrl": "",
+  "supaKey": ""
+ },
+ "challenges": {},
+ "packs": {},
+ "records": {},
+ "submissions": {},
+ "runs": {},
+ "editors": {}
+}
